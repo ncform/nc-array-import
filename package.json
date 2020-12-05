@@ -1,0 +1,56 @@
+{
+  "name": "@ncform/nc-array-import",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncform/nc-array-import.git"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name NcArrayImport src/components/index.vue",
+    "lint": "vue-cli-service lint",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@ncform/ncform": "^1.3.3",
+    "@ncform/ncform-common": "^1.3.0",
+    "@ncform/ncform-theme-elementui": "^1.3.3",
+    "element-ui": "^2.8.2",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-e2e-cypress": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-plugin-unit-mocha": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.1.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "lint-staged": "^8.1.5",
+    "vue-template-compiler": "^2.5.21",
+    "sass-loader": "^7.0.1",
+    "node-sass": "^4.9.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "main": "dist/NcArrayImport.umd.js",
+  "description": "ncform array-import",
+  "author": "Gcaufy<gcaufy@gmail.com>",
+  "keywords": [
+    "ncform",
+    "widget"
+  ]
+}
