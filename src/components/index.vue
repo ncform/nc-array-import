@@ -136,6 +136,13 @@
 <script>
 import ncformCommon from "@ncform/ncform-common";
 const layoutArrayMixin = ncformCommon.mixins.vue.layoutArrayMixin;
+
+const splitMap = {
+  tab: '\t',
+  br: '\n',
+  comma: ',',
+};
+
 export default {
   mixins: [layoutArrayMixin],
   props: {
@@ -155,15 +162,16 @@ export default {
     }
   },
   created() {
-    this.clearData();
+    const defaultValue = this.schema.defaultValue;
+    if (defaultValue && defaultValue.length) {
+      this.$set(this.schema, 'value', defaultValue);
+      this.pasteValue = defaultValue.join(splitMap[this.splitValue]);
+    } else {
+      this.clearData();
+    }
   },
   methods: {
     confirm() {
-      const splitMap = {
-        tab: '\t',
-        br: '\n',
-        comma: ',',
-      };
       const splitStr = splitMap[this.splitValue] || this.otherSplitValue;
 
       if (!splitStr) {

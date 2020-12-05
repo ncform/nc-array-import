@@ -40,7 +40,8 @@ export default {
               "widgetConfig": {
                 "disableCollapse": true,
               }
-            }
+            },
+            "defaultValue": [ 1234567, 892310 ],
           },
           "tags": {
             "type": "array",
