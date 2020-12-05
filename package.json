@@ -1,6 +1,6 @@
 {
   "name": "@ncform/nc-array-import",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ncform/nc-array-import.git"
@@ -64,11 +64,12 @@
   },
   "readme": "ERROR: No README data found!",
   "homepage": "https://github.com/ncform/nc-array-import#readme",
-  "_id": "@ncform/nc-array-import@0.0.1",
+  "_id": "@ncform/nc-array-import@0.0.2",
   "verpub": {
     "publish": {
       "client": "npm"
     },
     "tag": "{name}@{version}"
-  }
+  },
+  "_commitid": "6a94812"
 }
